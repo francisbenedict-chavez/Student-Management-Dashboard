@@ -1,32 +1,30 @@
 let mockStudentDb = [];
 
 export function getStudentsAPI() {
-    return mockStudentDb;
+  return mockStudentDb;
 }
 
 export function addStudentsAPI(newStudentData) {
-    let id = Date.now();
-    while (mockStudentDb.some((student) => student.id === id)) {
-        id += 1;
-    }
+  let id = Date.now();
+  while (mockStudentDb.some((student) => student.id === id)) {
+    id += 1;
+  }
 
-    const studentData = { ...newStudentData };
-    delete studentData.id;
+  const studentData = { ...newStudentData };
+  const savedStudent = { id, ...studentData };
 
-    const savedStudent = { id, ...studentData };
-
-    mockStudentDb.push(savedStudent);
-    return savedStudent;
+  mockStudentDb.push(savedStudent);
+  return savedStudent;
 }
 
 addStudentsAPI({
-    firstName: "Leslie",
-    lastName: "Andrews",
-    email: "leslie.andrews@example.com"
+  firstName: "Leslie",
+  lastName: "Andrews",
+  email: "leslie.andrews@example.com",
 });
 
 addStudentsAPI({
-    firstName: "Emma",
-    lastName: "Baumgarten",
-    email: "emma.baumgarten@example.com"
+  firstName: "Emma",
+  lastName: "Baumgarten",
+  email: "emma.baumgarten@example.com",
 });
