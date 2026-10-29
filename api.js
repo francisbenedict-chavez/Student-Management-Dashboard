@@ -4,6 +4,13 @@ export function getStudentsAPI() {
   return mockStudentDb;
 }
 
+/**
+ * Adds a student to the mock database and returns the saved record.
+ * @param {{firstName?: string, lastName?: string, email?: string}} newStudentData
+ * Student details to add.
+ * @returns {{id: number, firstName?: string, lastName?: string, email?: string}}
+ * The saved student record.
+ */
 export function addStudentsAPI(newStudentData) {
   let id = Date.now();
   while (mockStudentDb.some((student) => student.id === id)) {

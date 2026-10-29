@@ -7,7 +7,12 @@ console.log(
   addStudentsAPI({
     firstName: undefined,
     lastName: "Yagami",
-    email: "light.yagami@example.com",
+    email: "undefined.yagami@example.com",
+  }),
+  addStudentsAPI({
+    firstName: undefined,
+    lastName: "Anoter Yagami",
+    email: "light.anotheryagami@example.com",
   }),
 );
 

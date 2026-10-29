@@ -8,6 +8,11 @@ const firstNameInput = document.querySelector("#firstName");
 const lastNameInput = document.querySelector("#lastName");
 const emailInput = document.querySelector("#email");
 
+/**
+ * Displays the table body given the provided students.
+ * @param {Array<{firstName?: string, lastName?: string, email?: string}>} dataArray
+ * @returns {void}
+ */
 const renderTable = (dataArray) => {
   studentTableBody.replaceChildren();
 
@@ -35,6 +40,11 @@ const renderTable = (dataArray) => {
   });
 };
 
+/**
+ * Handles form submission, checks the fields, adds the student,
+ * then refreshes the table while clearing the form inputs.
+ * @param {SubmitEvent} event
+ */
 studentForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
