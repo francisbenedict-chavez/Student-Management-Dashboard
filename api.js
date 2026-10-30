@@ -6,9 +6,11 @@ export function getStudentsAPI() {
 
 /**
  * Adds a student to the mock database and returns the saved record.
- * @param {{firstName?: string, lastName?: string, email?: string}} newStudentData
+ * @param {{firstName?: string, lastName?: string,
+ * email?: string}} newStudentData
  * Student details to add.
- * @returns {{id: number, firstName?: string, lastName?: string, email?: string}}
+ * @returns {{id: number, firstName?: string, lastName?: string,
+ * email?: string}}
  * The saved student record.
  */
 export function addStudentsAPI(newStudentData) {

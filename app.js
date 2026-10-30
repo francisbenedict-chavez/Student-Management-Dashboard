@@ -10,7 +10,8 @@ const emailInput = document.querySelector("#email");
 
 /**
  * Displays the table body given the provided students.
- * @param {Array<{firstName?: string, lastName?: string, email?: string}>} dataArray
+ * @param {Array<{firstName?: string, lastName?: string,
+ * email?: string}>} dataArray
  * @returns {void}
  */
 const renderTable = (dataArray) => {
